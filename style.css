@@ -1,0 +1,279 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+#text-input{
+  color:rgb(18, 47, 82);
+  font-weight: 500;
+  background-color: transparent;
+  border: 5px solid rgba(255, 255, 255, 0.767);
+}
+#text-input::placeholder{
+  color: #2424248f;
+}
+.active{
+  display: none !important;
+}
+.actions-button-group>button{
+  width: 50px;
+  height: 50px;
+  border-radius: 1em;
+  border: none;
+
+}
+#clipboard-section>.message-clipboard{
+  text-align: center;
+  color: rgba(52, 58, 64, 1)
+}
+#clipboard-section>.message-clipboard>p{
+  color:rgba(73, 80, 87, 1); 
+}
+.actions-button-group>#encrip-btn{
+  background-color: rgba(10, 56, 113, 1);
+  color: rgba(216, 223, 232, 1);;
+}
+.actions-button-group>#desencrip-btn{
+  background-color: rgba(216, 223, 232, 1);
+  color: rgba(10, 56, 113, 1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: rgb(108, 147, 160);
+  }
+}
+#Logo>svg{
+  height: 30px !important;
+  position: absolute;
+  z-index: 10;
+  top: -10px;
+  left: 0;
+}
+#advert-icon{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+#advert-icon>svg{
+  height: 20px;
+  padding: 1rem 0;
+  padding-right: 10px;
+  color: gray !important;
+}
+#main{
+  position: relative;
+  min-width: 95vw;
+  min-height: 90vh;
+  margin: 0 auto;
+}
+#text-input{
+  resize: none;
+  outline: none;
+  border: none;
+}
+#encriptador-section{
+  padding-top: 2rem;
+  width:max-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.actions-button-group{
+  display: inline-flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.actions-button-group>button{
+  font-weight: 800;
+}
+.actions-button-group>button:hover{
+  transition: 300ms ease-in-out;
+  opacity: 0.8;
+}
+#clipboard-section{
+  background-color: #f8f8f8;
+  min-width: 200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+#copi-btn{
+  min-height: 50px;
+  border-radius: 4px;
+  border:1px solid rgba(10, 56, 113, 1);
+  background-color: transparent;
+  color:rgba(10, 56, 113, 1);
+  font-weight: 700;
+}
+
+
+@media (min-width:280px) and (max-width:520px) {
+  #encriptador-section{
+    margin-bottom: 1rem;
+  }
+  #text-input{
+    padding: 0.5rem;
+    width:90vw;
+    min-height: 45vh;
+    overflow: auto;
+  }
+  .actions-button-group>button{
+    width:150px !important;
+    height: 40px;
+    border-radius: 5px;
+  }
+  #clipboard-section{
+    width: 95%;
+    margin: 0 auto;
+    height: 170px;
+  }
+  .message-clipboard{
+    width: 90%;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+  }
+  .active{
+    display: none !important;
+  }
+  .clipboard-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 10%;
+    width: 90%;
+    height: 90%;
+    font-size: 0.8em;
+  }
+  
+  #clipboard-text-encripted{
+    width: auto;
+    overflow: auto;
+    height: 70%;
+  }
+}
+
+
+@media (min-width:520px) and (max-width:1024px) {
+  #encriptador-section{
+    margin-bottom: 1rem;
+  }
+  #text-input{
+    padding: 0.5rem;
+    width:90vw;
+    min-height: 45vh;
+    overflow: auto;
+  }
+  .actions-button-group>button{
+    width:150px !important;
+    height: 40px;
+    border-radius: 5px;
+  }
+  #clipboard-section{
+    width: 95%;
+    margin: 0 auto;
+    height: 170px;
+  }
+  .message-clipboard{
+    width: 90%;
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+  }
+  .active{
+    display: none !important;
+  }
+  .clipboard-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 10%;
+    width: 90%;
+    height: 90%;
+    font-size: 0.8em;
+  }
+  
+  #clipboard-text-encripted{
+    width: auto;
+    overflow: auto;
+    height: 70%;
+  }
+}
+
+@media (min-width:1024px) and (max-width:1900px){
+  #main{
+    display: inline-flex;
+    background-color: transparent;
+    height: 95vh;
+    flex-direction: row;
+    justify-content: stretch;
+    padding: 0;
+  }
+  #clipboard-section{
+    background-color: rgba(255, 255, 255, 0.849);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    min-width: 240px;
+    max-width: 240px;
+    justify-content: center;
+  }
+  #clipboard-section>#figura>svg{
+    max-width: calc(100%);
+  }
+  #encriptador-section{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  #text-input{
+    min-height: 80%;
+    font-size: 1em; 
+    outline:  1px solid rgba(255, 255, 255, 0.466);
+  }
+  .actions-button-group{
+    justify-content: space-between;
+  }
+  .actions-button-group>button{
+    width: 200px;
+    height: 50px;
+    border-radius: 1em;
+    border: none;
+  
+  }
+  #clipboard-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    color:rgba(10, 56, 113, 1);
+    overflow: auto;
+    height: 100%;
+
+  }
+}
